@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class AnswerActivity1 extends AppCompatActivity {
 
     TextView tvAnswer;
+    TextView tvAnswer1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,13 @@ public class AnswerActivity1 extends AppCompatActivity {
         //tvAnswer.setText("In Second Activity");
         Intent intentReceived = getIntent();
         String questionsSelected = intentReceived.getStringExtra("Question");
-        tvAnswer.setText(questionsSelected + " answer is: Queue");
+        if (questionsSelected.equalsIgnoreCase("q1")) {
+            tvAnswer.setText(questionsSelected + " answer is: Queue");
+
+        } else if (questionsSelected.equalsIgnoreCase("q2")) {
+            tvAnswer1.setText(questionsSelected + " answer is: Gone");
+        }
+
     }
     @Override
     protected void onStart() {
