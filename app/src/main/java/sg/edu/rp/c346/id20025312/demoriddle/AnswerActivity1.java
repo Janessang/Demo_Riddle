@@ -20,6 +20,7 @@ public class AnswerActivity1 extends AppCompatActivity {
         Log.d("AnswerActivity1", "onCreate() called.");
 
         tvAnswer = findViewById(R.id.textView);
+        tvAnswer1 = findViewById(R.id.textView);
         //tvAnswer.setText("In Second Activity");
         Intent intentReceived = getIntent();
         String questionsSelected = intentReceived.getStringExtra("Question");
